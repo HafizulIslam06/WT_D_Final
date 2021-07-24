@@ -172,7 +172,7 @@
     {
       if(authenticateUser($username,$password))
       {
-          echo "Completed";
+        header("Location: dashboard.php");
       }
       else
       {

@@ -1,7 +1,6 @@
 <?php
   include 'header.php';
   include 'controllers/UserController.php';
-
 ?>
 
 <html>
@@ -74,8 +73,8 @@
         </body>
       </td>
     </tr>
-  </table>
-  <?php 
-    include 'footer.php';
-    ?>
+  </table>  
 </html>
+<?php 
+    include 'footer.php';
+?>
