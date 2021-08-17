@@ -1,0 +1,116 @@
+.header {
+  text-align: center;
+  background-color: transparent;
+  border: none;
+}
+
+.header1 {
+  margin-top: -8px;
+  margin-left: 0;
+  position: relative;
+  margin-top: 0;
+  margin-left: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #17202a;
+  border: none;
+}
+
+.btn-link {
+  color: white;
+  text-decoration: none;
+}
+
+.commonButton {
+  background-color: #2ecc71;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+.commonButton:hover {
+  background-color: #229954;
+  color: white;
+}
+
+.Button2 {
+  background-color: #e67e22;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+.Button2:hover {
+  background-color: #ba4a00;
+  color: white;
+}
+
+.h {
+  color: white;
+}
+
+.staticpagecolor {
+  background-color: #566573;
+}
+
+.adminHeader {
+  text-align: center;
+}
+
+.margin {
+  margin-top: 0;
+  margin-left: 0;
+}
+/* 
+
+.button {
+  background-color: rgb(52, 152, 219);
+  color: White;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.button:hover {
+  background-color: rgb(41, 128, 185);
+}
+
+body {
+  margin: 0px;
+}
+.h1 {
+  background-color: teal;
+  color: white;
+  text-align: center;
+  font-size: 40px;
+  padding: 6px;
+  margin-bottom: 0px;
+}
+.ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 210px;
+  background-color: black;
+  height: 9000px;
+}
+.li a {
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+  display: block;
+  padding-left: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.li a.active {
+  background-color: green;
+  color: white;
+}
+.li a:hover:not(.active) {
+  background-color: red;
+  color: white;
+} */
