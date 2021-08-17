@@ -102,7 +102,7 @@
 
       $rs=insertEmployee($_POST["name"] ,$_POST["position"] ,$_POST["salary"] ,$_POST["username"] ,$_POST["password"],$target);  
       
-      if($rs===true && $ss===true)
+      if($rs===true)
       {          
           header("Location:allEmployee.php");
       }

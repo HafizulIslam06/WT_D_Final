@@ -2,6 +2,7 @@
     include_once 'admin_header.php';
     include_once 'employeHeader.php';
     include_once 'Controllers/employeeController.php';
+    
 ?>
 
 <html>
@@ -152,10 +153,6 @@
         e.preventDefault()
         document.querySelectorAll(".errsalary td")[0].innerText = "Input required"
       } 
-      else if(salary.value.length < 5) {
-        e.preventDefault()
-        document.querySelectorAll(".errsalary td")[0].innerText = "required atlest 5 character"
-      }
       
 
       //password

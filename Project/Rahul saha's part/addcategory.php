@@ -1,14 +1,13 @@
 <?php
-    include_once 'admin_header.php';    
+    include_once 'admin_header.php';
     include_once 'category_header.php';
     include 'Controllers/CategoryController.php';
-    
 ?>
 
 <html>
 	<body>
         <?php echo $err_db ?>
-		<form id="categoryform" align="center" method="post" action="">
+		<form align="center" method="post" action="">
 		<fieldset>
 			<table align="center">
 			<h3>Add Catagory</h3>
@@ -21,8 +20,7 @@
                             {                                   
                             echo '<tr><td>'.$err_name.'</td></tr>';
                             }
-                        ?>	
-						<tr class="name"><td></td></tr>					
+                        ?>						
 					</td> 
 				</tr>
 				
@@ -35,19 +33,4 @@
 		</fieldset>
 		</form>
 	</body>
-
-<script>
-    const name = document.getElementsByName("name")[0]
-
-    document.getElementById("categoryform").addEventListener("submit", e => {
-      if(name.value.length === 0 ) {
-        e.preventDefault()
-        document.querySelectorAll(".name td")[0].innerText = "Input required"
-      } 
-      else if(name.value.length < 5) {
-        e.preventDefault()
-        document.querySelectorAll(".name td")[0].innerText = "required atlest 5 character"
-      } 
-    })
-</script>
 </html>

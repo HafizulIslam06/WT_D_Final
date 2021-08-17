@@ -31,11 +31,15 @@
             $productCount=mysqli_num_rows($result5); 
             $employeeCount=mysqli_num_rows($result6);
             
-            echo json_encode(array("workers" => $workerCount, "admins" => $adminCount, "customers" => $customerCount, "deliveryMans" => $deliverymanCount, "products" => $productCount, "employees" => $employeeCount));
+            echo json_encode(array("workers" => $workerCount, "admins" => $adminCount, "customers" => $customerCount, "deliveryMans" => $deliverymanCount, "products" => $productCount, "employees" => $employeeCount)); //echo just returning the data
         }
         exit;
     }
     include_once 'admin_header.php';
+    if(!$_SESSION["loggeduser"])
+    {
+        header("Location:LogIn.php");
+    }
 ?>
 
 <html>
@@ -44,10 +48,10 @@
 <body>    
     <h3 align="center">Total number of Worker : <span></span></h3>
     <h3 align="center">Total number of Admin :  <span></span></h3>
-    <h3 align="center">Total number of Employee : <span></span></h3> 
-    <h3 align="center">Total number of Customer : <span></span></h3>
+    <h3 align="center">Total number of Customer : <span></span></h3> 
     <h3 align="center">Total number of Delivery man : <span></span></h3>
-    <h3 align="center">Total number of Product : <span></span></h3>  
+    <h3 align="center">Total number of Product : <span></span></h3>
+    <h3 align="center">Total number of Employee : <span></span></h3>  
     <!-- <h3 align="center">Total number of Worker : <?php echo $workerCount;?></h3>
     <h3 align="center">Total number of Admin : <?php echo $adminCound;?></h3>
     <h3 align="center">Total number of Employee : <?php echo $employeeCount ;?></h3> 
@@ -55,13 +59,13 @@
     <h3 align="center">Total number of Delivery man : <?php echo $deliverymanCount ;?></h3>
     <h3 align="center">Total number of Product : <?php echo $productCount ;?></h3>      -->
     <script>
-        const req = new XMLHttpRequest();
-        req.open("POST", "./dashboard.php");
-        req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        req.responseType = "json";
-        req.onreadystatechange = () =>
-            req.readyState === 4 && handleResponse(req.response);
-        req.send();
+        const req = new XMLHttpRequest(); //class(for info recive)
+        req.open("POST", "./dashboard.php"); //request methode & request url
+        //req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");//configeration for sending data
+        req.responseType = "json"; //recive data type
+        req.onreadystatechange = () => //kon stage e ace
+        req.readyState === 4 && handleResponse(req.response); //4 mean request completed
+        req.send(); 
 
         function handleResponse(response) {
             const result = Object.values(response)

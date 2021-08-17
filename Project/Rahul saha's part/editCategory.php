@@ -11,7 +11,7 @@
 	<head></head>
 	<h5><?php echo $err_db;?></h5>
 	<body>
-		<form id="editcategoryform" method="post" action="">
+		<form  method="post" action="">
 		<fieldset>
 			<table align="center">
 			<td><input type="hidden" name="id" value="<?php echo $c["id"]; ?>"></td>
@@ -26,7 +26,6 @@
 						echo '<tr><td>'.$err_name.'</td></tr>';
 						}
                     ?>
-					<tr class="name"><td></td></tr>		
 					</td>
 					 
 				</tr>
@@ -40,19 +39,4 @@
 		</fieldset>
 		</form>
 	</body>
-
-	<script>
-    const name = document.getElementsByName("name")[0]
-
-    document.getElementById("editcategoryform").addEventListener("submit", e => {
-      if(name.value.length === 0 ) {
-        e.preventDefault()
-        document.querySelectorAll(".name td")[0].innerText = "Input required"
-      } 
-      else if(name.value.length < 5) {
-        e.preventDefault()
-        document.querySelectorAll(".name td")[0].innerText = "required atlest 5 character"
-      } 
-    })
-</script>
 </html>

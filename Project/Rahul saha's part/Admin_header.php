@@ -1,9 +1,5 @@
 <?php
-	session_start();    
-    if(!$_SESSION["loggeduser"])
-    {
-        header("Location:LogIn.php");
-    }
+	session_start();
 ?>
 
 <html>
@@ -14,7 +10,7 @@
         <fieldset class="header1"> 
         <h1 class="h">Welcome <?php echo $_SESSION["loggeduser"];?></h1>
         <h3> 
-            <a class="btn-link" href="dashboard.php" >Dashboard</a>
+            <a class="btn-link" href="" >Dashboard</a>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
             <a class="btn-link" href="employee.php" >Employee</a>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
@@ -22,7 +18,7 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a class="btn-link" href="product.php" >Products</a>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            
-            <a class="btn-link" href="profileInfo.php">Profile</a>
+            <a class="btn-link" href="">Profile</a>
         </h3>           
         </fieldset>
     </body>
